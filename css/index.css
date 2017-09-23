@@ -5,6 +5,7 @@
  * Teal:	#23797E
  * Green:	#298A1F
  *	Darker:	#22711A
+ * Gray:	#DDDDDD
  */
 
 body {
@@ -63,17 +64,17 @@ a.callout i.fa {
 .home-menu .pure-menu-selected, .home-menu .pure-menu-selected:hover {
 	border-bottom-color: white;
 }
-.content {
+.container {
 	margin-top: 100px;
 }
 .splash {
 	width: 100%;
-	height: 50%;
-	text-align: center;
+	height: 40%;
 	position: absolute;
 	top: 100px;
+	overflow: hidden;
 }
-.splash img {
+.splash .splash-image {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -82,13 +83,64 @@ a.callout i.fa {
 	top: 0;
 	bottom: 0;
 	object-fit: cover;
+	filter: blur(7px);
+	transform: scale(1.1);
 }
-.content {
+.splash .content-block {
+	height: 100%;
+	position: relative;
+}
+.splash .motto {
+	color: white;
+	width: 66%;
 	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	font-size: 200%;
+	text-shadow: 0 0 14px #000;
+}
+.splash .motto .content {
+	position: relative;
 	top: 50%;
+	transform: translateY(-50%);
+	margin: 0 1em 0 1em;
+}
+.splash .motto .motto-logo {
+	width: 65%;
+}
+.splash .motto p {
+	margin: 0;
+}
+.splash .call-to-action {
+	width: 33%;
+	position: absolute;
+	right: 0;
+	height: 100%;
+}
+.splash .call-to-action .content {
+	background: #254571;
+	border: 3px solid #1D3557;
+	box-shadow: 0 0 14px rgba(0,0,0,0.5);
+	color: white;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-right: 1em;
+	padding: 1em;
+}
+.splash .call-to-action p {
+	margin-top: 0;
+	font-size: 150%;
+	text-align: left;
+	font-size: normal;
+}
+.container {
+	position: absolute;
+	top: 40%;
 	width: 100%;
 }
-.content .spacer {
+.container .spacer {
 	background: #254571;
 	height: 1em;
 	color: white;
@@ -96,7 +148,7 @@ a.callout i.fa {
 	font-weight: bold;
 	border-top: 6px solid #1D3557;
 }
-.content .welcome {
+.container .welcome {
 	padding: 1em;
 	background: white;
 }
@@ -130,8 +182,81 @@ a.callout i.fa {
 	padding: 5px;
 }
 
+.employee-item {
+	text-align: center;
+	border: 3px solid #ddd;
+	margin: 5px;
+}
+.employee-item img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	margin-bottom: -4px;
+}
+.employee-item-name {
+	background: #254571;
+	color: white;
+	font-weight: bold;
+	font-size: 120%;
+	padding: 1em;
+	text-transform: uppercase;
+}
+.employee-item-role {
+	padding: 1em;
+	color: #254571;
+}
+
+@media (max-width: 1250px)
+{
+	.splash .motto {
+		width: 50%;
+	}
+	.splash .motto .motto-logo {
+		width: 80%;
+	}
+	.splash .call-to-action {
+		width: 50%;
+	}
+}
+
+@media (max-width: 1023px)
+{
+	.splash .call-to-action p {
+		font-size: 110%;
+		line-height: 150%;
+	}
+}
+
 @media (max-width: 767px)
 {
+	.splash {
+		top: 150px;
+		height: 25%;
+	}
+	.splash .motto {
+		position: initial;
+		width: 80%;
+		margin: 0 auto 0 auto;
+	}
+	.splash .motto .content {
+		font-size: 120%;
+		text-align: center;
+	}
+	.splash .motto .motto-logo {
+		display: none;
+	}
+	.splash .motto .content p {
+		text-align: center;
+		font-size: initial;
+		font-size: 80%;
+	}
+	.splash .call-to-action {
+		display: none;
+	}
+	.container {
+		top: 25%;
+		margin-top: 150px;
+	}
 	.home-menu .pure-menu-heading {
 		width: 100%;
 		text-align: center;
@@ -151,6 +276,9 @@ a.callout i.fa {
 
 @media (max-width: 424px)
 {
+	.splash .motto .content {
+		margin: 0;
+	}
 	.home-menu .home-link {
 		display: none;
 	}
