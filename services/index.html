@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/pure-min.css">
+	<link rel="stylesheet" href="/css/grids-responsive-min.css">
+	<link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/index.css">
+	<title>Angelo Ventresca Associates</title>
+	<script type="text/javascript">
+		window.onload = function() {
+			var payrollShowHide = document.getElementById('show-hide-payroll');
+			var payrollContainer = document.getElementsByClassName('payroll-table-container')[0];
+			payrollShowHide.onclick = function(event) {
+				if (payrollContainer.className.includes("shown")) {
+					payrollShowHide.textContent = "show";
+					payrollContainer.className = payrollContainer.className.replace("shown", "");
+				} else {
+					payrollShowHide.textContent = "hide";
+					payrollContainer.className += " shown";
+				}
+				event.preventDefault();
+			}
+		};
+	</script>
+</head>
+<body>
+	<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+		<div class="content-block">
+			<a href="/" class="pure-menu-heading">
+				<div class="menu-logo"></div>
+			</a>
+			<div class="menu-right">
+				<ul class="pure-menu-list">
+					<li class="pure-menu-item home-link">
+						<a href="/" class="pure-menu-link">Home</a>
+					</li>
+					<li class="pure-menu-item pure-menu-selected">
+						<a href="/services" class="pure-menu-link">Services</a>
+					</li>
+					<li class="pure-menu-item">
+						<a href="/about" class="pure-menu-link">About</a>
+					</li>
+					<li class="pure-menu-item">
+						<a href="/contact" class="pure-menu-link">Contact</a>
+					</li>
+					<li class="pure-menu-item resources-link">
+						<a href="/resources" class="pure-menu-link">Resources</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="content">
+			<div class="pure-g content-block">
+				<div class="pure-u-1">
+					<h1>Services</h1>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height blue">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-file-text fa-2x" aria-hidden="true"></i> Tax Services
+						</div>
+						<div class="container-item-body">
+							<ul class="style-checks">
+								<li>Tax return preparation</li>
+								<li>Electronic filing</li>
+								<li>Notice resolution</li>
+								<li><span class="tooltip">EA Audit representation<span class="tooltiptext" style="width: 300px;">An <strong>EA</strong> (or <strong>Enrolled Agent</strong>) is licensed by the federal government after passing a comprehensive IRS examination and background investigation. <strong>Enrolled Agents</strong> are permitted to represent taxpayers before the IRS in tax disputes.</span></span>
+								</li>
+								<li>Estimated payments calculation</li>
+								<li>Complimentary tax return review</li>
+							</ul>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="#tax-services">All Tax Services <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height blue">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-usd fa-2x" aria-hidden="true"></i> Payroll Services
+						</div>
+						<div class="container-item-body">
+							<ul class="style-checks">
+								<li>General ledgers</li>
+								<li>Quarterly payroll reports</li>
+								<li>Payroll checks and reports</li>
+								<li>Year-end payroll reports</li>
+								<li>Sales tax reports</li>
+								<li>Bank reconciliation</li>
+								<li>Electronic deposits</li>
+							</ul>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="#payroll-services">All Payroll Services <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height blue">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-suitcase fa-2x" aria-hidden="true"></i> Business Services
+						</div>
+						<div class="container-item-body">
+							<ul class="style-checks">
+								<li>Generating business projections</li>
+								<li>Preparing financial statements</li>
+								<li>Completing SBA loan applications</li>
+								<li>Retirement planning</li>
+								<li>Owner financial services</li>
+								<li>Business practice review</li>
+								<li>Cost/Benefit assessment</li>
+							</ul>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="#business-services">All Business Services <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1 container-item expand-height white other">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-question-circle fa-2x" aria-hidden="true"></i> Other
+						</div>
+						<div class="container-item-body">
+							<h4>Ask us about your unique situation</h4>
+							<p>These are some of our most popular services, but we can do much more to help you or your business.</p>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="/contact">Ask us <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1">
+					<span class="page-anchor" id="tax-services"></span>
+					<h1>Tax Services</h1>
+					<p>We have been proudly serving our community for over 40 years, and along the way we've gained broad and deep tax expertise.</p>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 container-item expand-height blue">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-book fa-2x" aria-hidden="true"></i> Tax return preparation
+						</div>
+						<div class="container-item-body">
+							<h4>We prepare tax returns for:</h4>
+							<ul>
+								<li>Individual</li>
+								<li>Farm</li>
+								<li>Self-employed</li>
+								<li>Corporate</li>
+								<li>Partnership</li>
+								<li>Estate and trust</li>
+								<li>Limited liability companies</li>
+								<li>Partnerships</li>
+								<li>Out of state</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 container-item expand-height white">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-info-circle fa-2x" aria-hidden="true"></i> Other tax services
+						</div>
+						<div class="container-item-body">
+							<h4>We also provide:</h4>
+							<ul>
+								<li>Electronic filing</li>
+								<li>Tax projections</li>
+								<li>Divorce consequences</li>
+								<li>Audit representation</li>
+							</ul>
+							<p>Need more information? Ask us about your unique situation.</p>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="/contact">Ask us <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1">
+					<span class="page-anchor" id="payroll-services"></span>
+					<h1>Payroll services</h1>
+					<p>We strive to provide comprehensive payroll services for all your business needs. All our work is performed on secure, in-house equipment, and our payroll services assure full compliance with state and federal tax and payroll deposit requirements.</p>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 container-item white">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-exclamation fa-2x" aria-hidden="true"></i> What you do
+						</div>
+						<div class="container-item-body">
+							<h4>Each pay period:</h4>
+							<ul>
+								<li>Email, fax, or call us to send in your payroll hours and changes each pay period.</li>
+								<li>Sign and distribute all checks and tax forms</li>
+							</ul>
+							<h4>Our fax machine is on 24 hours a day, 7 days a week</h4>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 container-item expand-height blue">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-check fa-2x" aria-hidden="true"></i> What we do
+						</div>
+						<div class="container-item-body">
+							<h4>Each pay period, we prepare:</h4>
+							<ul>
+								<li>Payroll checks with employee earnings statement</li>
+								<li>Payroll journal</li>
+								<li>Check register</li>
+							</ul>
+							<h4>Each deposit period, we prepare checks for:</h4>
+							<ul>
+								<li>FICA</li>
+								<li>FWT</li>
+								<li>FUTA</li>
+								<li>State</li>
+								<li>Unemployment</li>
+							</ul>
+							<h4>Each quarter, we prepare a:</h4>
+							<ul>
+								<li>Federal 941 return</li>
+								<li>State unemployment comp return</li>
+								<li>State withholding tax return</li>
+							</ul>
+							<h4>Each year, we:</h4>
+							<ul>
+								<li>Prepare employer W-2 and W-3 forms for Federal and State</li>
+								<li>Prepare employee W-2 forms</li>
+								<li>Electronically transmit W-2 and W-3 to social security administration</li>
+							</ul>
+							<h4>Our other services and charges include:</h4>
+							<ul>
+								<li>Nominal charge for each check</li>
+								<li>Check envelopes are available for an added charge</li>
+								<li>Federal electronic deposits are no charge</li>
+								<li>Direct deposit of employee checks are no charge. Your bank may have an additional charge.</li>
+								<li>Mailing all checks and reports at no charge</li>
+								<li>Provide workers' compensation and payroll audits at no charge</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1">
+					<h3 style="text-align: center;">Payroll services cost per month <a class="show-hide" id="show-hide-payroll" href="#">show</a></h3>
+					<div class="payroll-table-container">
+						<div class="payroll-table-padding">
+							<table class="td-centered payroll-table">
+								<tr>
+									<th rowspan="2">Number of employees</th>
+									<th colspan="2">Regular payrolls</th>
+									<th colspan="2">Specialized payrolls</th>
+								</tr>
+								<tr>
+									<th>Weekly payroll</th>
+									<th>Bi-weekly payroll</th>
+									<th>Weekly payroll</th>
+									<th>Bi-weekly payroll</th>
+								</tr>
+								<tr>
+									<td><span>1</span>-<span>3</span></td>
+									<td>54</td>
+									<td>47</td>
+									<td>58</td>
+									<td>48</td>
+								</tr>
+								<tr>
+									<td><span>4</span>-<span>6</span></td>
+									<td>83</td>
+									<td>62</td>
+									<td>92</td>
+									<td>66</td>
+								</tr>
+								<tr>
+									<td><span>7</span>-<span>10</span></td>
+									<td>106</td>
+									<td>79</td>
+									<td>119</td>
+									<td>87</td>
+								</tr>
+								<tr>
+									<td><span>11</span>-<span>15</span></td>
+									<td>156</td>
+									<td>105</td>
+									<td>188</td>
+									<td>124</td>
+								</tr>
+								<tr>
+									<td><span>16</span>-<span>20</span></td>
+									<td>190</td>
+									<td>122</td>
+									<td>233</td>
+									<td>142</td>
+								</tr>
+								<tr>
+									<td><span>21</span>-<span>25</span></td>
+									<td>227</td>
+									<td>142</td>
+									<td>272</td>
+									<td>164</td>
+								</tr>
+								<tr>
+									<td><span>26</span>-<span>30</span></td>
+									<td>265</td>
+									<td>159</td>
+									<td>311</td>
+									<td>179</td>
+								</tr>
+								<tr>
+									<td><span>31</span>-<span>35</span></td>
+									<td>298</td>
+									<td>179</td>
+									<td>350</td>
+									<td>206</td>
+								</tr>
+								<tr>
+									<td><span>36</span>-<span>40</span></td>
+									<td>331</td>
+									<td>197</td>
+									<td>390</td>
+									<td>225</td>
+								</tr>
+								<tr>
+									<td><span>41</span>-<span>45</span></td>
+									<td>369</td>
+									<td>215</td>
+									<td>439</td>
+									<td>251</td>
+								</tr>
+								<tr>
+									<td><span>46</span>-<span>50</span></td>
+									<td>405</td>
+									<td>233</td>
+									<td>484</td>
+									<td>272</td>
+								</tr>
+								<tr>
+									<td><span>51</span>-<span>55</span></td>
+									<td>439</td>
+									<td>246</td>
+									<td>524</td>
+									<td>291</td>
+								</tr>
+								<tr>
+									<td><span>56</span>-<span>60</span></td>
+									<td>471</td>
+									<td>262</td>
+									<td>561</td>
+									<td>306</td>
+								</tr>
+								<tr>
+									<td><span>61</span>-<span>65</span></td>
+									<td>508</td>
+									<td>284</td>
+									<td>609</td>
+									<td>335</td>
+								</tr>
+								<tr>
+									<td><span>66</span>-<span>70</span></td>
+									<td>545</td>
+									<td>298</td>
+									<td>653</td>
+									<td>350</td>
+								</tr>
+								<tr>
+									<td><span>71</span>-<span>75</span></td>
+									<td>579</td>
+									<td>320</td>
+									<td>692</td>
+									<td>380</td>
+								</tr>
+								<tr>
+									<td><span>76</span>-<span>80</span></td>
+									<td>612</td>
+									<td>335</td>
+									<td>733</td>
+									<td>395</td>
+								</tr>
+								<tr>
+									<td><span>81</span>-<span>85</span></td>
+									<td>649</td>
+									<td>358</td>
+									<td>778</td>
+									<td>417</td>
+								</tr>
+								<tr>
+									<td><span>86</span>-<span>90</span></td>
+									<td>686</td>
+									<td>373</td>
+									<td>824</td>
+									<td>446</td>
+								</tr>
+								<tr>
+									<td><span>91</span>-<span>95</span></td>
+									<td>720</td>
+									<td>395</td>
+									<td>867</td>
+									<td>476</td>
+								</tr>
+								<tr>
+									<td><span>96</span>-<span>100</span></td>
+									<td>752</td>
+									<td>410</td>
+									<td>912</td>
+									<td>506</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1">
+					<span class="page-anchor" id="business-services"></span>
+					<h1>Business services</h1>
+					<p>Whether you're starting a new business, expanding your current one, or looking to acquire, we're here to help you succeed.</p>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 container-item expand-height blue">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-plus fa-2x" aria-hidden="true"></i> Starting a new business
+						</div>
+						<div class="container-item-body">
+							<ul>
+								<li>Selecting the proper organization structure</li>
+								<li>Developing a business plan</li>
+								<li>Preparing financial statements</li>
+								<li><span class="tooltip">Filing loan applications<span class="tooltiptext" style="width: 300px;">We have extensive experience with SBA loans for small businesses</span></span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 container-item expand-height blue">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-arrows-alt fa-2x" aria-hidden="true"></i> Expanding your business
+						</div>
+						<div class="container-item-body">
+							<ul>
+								<li>Analyzing cash flow</li>
+								<li>Discovering cost controls</li>
+								<li>Developing projections and proformas</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 container-item expand-height blue">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-handshake-o fa-2x" aria-hidden="true"></i> Acquiring a business
+						</div>
+						<div class="container-item-body">
+							<ul>
+								<li>Analyzing capital requirements</li>
+								<li>Projecting profitability</li>
+								<li>Reviewing new acquisitions</li>
+								<li>Preparing financial statements</li>
+								<li>Reviewing lease-buy agreements</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 container-item expand-height white">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-question-circle fa-2x" aria-hidden="true"></i> Other
+						</div>
+						<div class="container-item-body">
+							<h4>Ask us about your unique situation</h4>
+							<p>We can help you with other business needs as well, including managing your business and increasing your profitability.</p>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="/contact">Ask us <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div>
+				<div>
+					&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Angelo Ventresca Associates
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
