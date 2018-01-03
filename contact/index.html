@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/pure-min.css">
+	<link rel="stylesheet" href="/css/grids-responsive-min.css">
+	<link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/index.css">
+	<title>Angelo Ventresca Associates</title>
+	<script type="text/javascript">
+		window.onload = function() {
+			var open = true;
+			var date = new Date();
+			
+			// Check if in tax season
+			if (date.getMonth() >= 4) {
+				// Not in tax season
+				switch (date.getDay()) {
+					case 0:
+					case 6:
+						open = false;
+						break;
+					case 1:
+					case 2:
+					case 3:
+					case 4:
+					case 5:
+						if (date.getHours() < 8 || date.getHours() > 16 || (date.getHours() == 16 && date.getMinutes() > 30)) {
+							open = false;
+						}
+						break;
+				}
+			} else {
+				// In tax season
+				switch (date.getDay()) {
+					case 0:
+						open = false;
+						break;
+					case 1:
+					case 2:
+					case 3:
+					case 4:
+						if (date.getHours() < 8 || date.getHours() > 19) {
+							open = false;
+						}
+						break;
+					case 5:
+						if (date.getHours() < 8 || date.getHours() > 15) {
+							open = false;
+						}
+						break;
+				}
+			}
+			
+			var openElements = document.getElementsByClassName('condition-open');
+			var closedElements = document.getElementsByClassName('condition-closed');
+			
+			for (var i = 0; i < openElements.length; ++i) {
+				openElements[i].className += ' ' + (open ? 'shown' : 'hidden');
+			}
+			for (var i = 0; i < closedElements.length; ++i) {
+				closedElements[i].className += ' ' + (!open ? 'shown' : 'hidden');;
+			}
+	};
+	</script>
+</head>
+<body>
+	<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+		<div class="content-block">
+			<a href="/" class="pure-menu-heading">
+				<div class="menu-logo"></div>
+			</a>
+			<div class="menu-right">
+				<ul class="pure-menu-list">
+					<li class="pure-menu-item home-link">
+						<a href="/" class="pure-menu-link">Home</a>
+					</li>
+					<li class="pure-menu-item">
+						<a href="/services" class="pure-menu-link">Services</a>
+					</li>
+					<li class="pure-menu-item">
+						<a href="/about" class="pure-menu-link">About</a>
+					</li>
+					<li class="pure-menu-item pure-menu-selected">
+						<a href="/contact" class="pure-menu-link">Contact</a>
+					</li>
+					<li class="pure-menu-item resources-link">
+						<a href="/resources" class="pure-menu-link">Resources</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="content">
+			<div class="pure-g content-block">
+				<div class="pure-u-1">
+					<h1>Contact</h1>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height blue">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-envelope fa-2x" aria-hidden="true"></i> Email
+						</div>
+						<div class="container-item-body">
+							<h4>Looking for someone specific?</h4>
+							<p>We pride ourselves on direct and open communication.</p>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="#associates">Contact an <span class="avoidwrap">associate<i class="fa fa-arrow-right" aria-hidden="true"></i></span></a>
+						</div>
+						<div class="container-item-body">
+							<h4>Don't know who to contact?</h4>
+							<p>Our office manager will make sure that you find the right person.</p>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="mailto:erin@angelov.com">Contact our <span class="avoidwrap">office manager<i class="fa fa-arrow-right" aria-hidden="true"></i></span></a>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height blue">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-phone fa-2x" aria-hidden="true"></i> Call
+						</div>
+						<div class="container-item-body call-body">
+							<div class="pure-g condition-closed">
+								<div class="pure-u-1-5">
+									<i class="fa fa-moon-o fa-4x"></i>
+								</div>
+								<div class="pure-u-4-5">
+									<h4>Calling after hours?</h4>
+									<p>Leave us a message and we'll get right back to you.</p>
+								</div>
+							</div>
+							<div class="pure-g condition-open">
+								<div class="pure-u-1-5">
+									<i class="fa fa-sun-o fa-4x"></i>
+								</div>
+								<div class="pure-u-4-5">
+									<h4>Give us a call</h4>
+									<p>There's a good chance that we're in the office right now.</p>
+								</div>
+							</div>
+							<h2>
+								<a href="tel:15702782721"><span class="light">(</span> 570 <span class="light">)</span> 278 <span class="light">-</span> 2721</a>
+							</h2>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height blue">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-envelope-open fa-2x"></i> Post
+						</div>
+						<div class="container-item-body address-body">
+							<h4>Send letters and packages to our postal address:</h4>
+							<div class="address">
+								<div class="sender"></div>
+								<div class="stamp"></div>
+								<div class="clearfix"></div>
+								<div class="receiver">
+									Angelo Ventresca Associates <br />
+									8109 State Route 706 <br />
+									Montrose, PA 18801-9318
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-3 container-item expand-height white">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-clock-o fa-2x" aria-hidden="true"></i> Hours
+						</div>
+						<h5>
+							<span class="condition-open">We're <span class="tooltip"><strong>probably open</strong><span class="tooltiptext">It's best to <strong>call before</strong> coming in for a visit. We might not be in due to a holiday or emergency.</span></span> right now. Come on in!</span>
+							<span class="condition-closed">We're <span class="tooltip"><strong>probably closed</strong><span class="tooltiptext">You never know when we'll be in the office. It never hurts to <strong>give us a call</strong> to be sure.</span></span> right now. Leave us a message!</span>
+						</h5>
+						<div class="container-item-body hours-body">
+							<table>
+								<tr>
+									<th rowspan="2">Days</th>
+									<th colspan="2"><span class="tooltip">Regular Hours<span class="tooltiptext">We maintain regular hours <strong>between May and December</strong>, outside of tax season.</span></span></th>
+									<th colspan="2"><span class="tooltip">Tax Season Hours<span class="tooltiptext">We extend our hours <strong>between January and April</strong>, during tax season.</span></span></th>
+								</tr>
+								<tr>
+									<th>Open</th>
+									<th>Close</th>
+									<th>Open</th>
+									<th>Close</th>
+								</tr>
+								<tr>
+									<td>Monday - Thursday</td>
+									<td>8:00 AM</td>
+									<td>4:30 PM</td>
+									<td>8:00 AM</td>
+									<td>8:00 PM</td>
+								</tr>
+								<tr>
+									<td>Friday</td>
+									<td>8:00 AM</td>
+									<td>4:30 PM</td>
+									<td>8:00 AM</td>
+									<td>6:00 PM</td>
+								</tr>
+								<tr>
+									<td>Saturday</td>
+									<td>Closed</td>
+									<td>Closed</td>
+									<td>8:00 AM</td>
+									<td>4:00 PM</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-lg-1-3 container-item expand-height blue">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-map-marker fa-2x" aria-hidden="true"></i> Visit
+						</div>
+						<div class="container-item-body map-body">
+							<iframe id="map" src="https://maps.google.com/maps?q=Angelo Ventresca Associates LLC&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1">
+					<span class="page-anchor" id="associates"></span>
+					<h1>Contact an associate</h1>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height white">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Joseph Lubash
+						</div>
+						<div class="container-item-body">
+							<ul class="style-checks">
+								<li>MBA</li>
+								<li><span class="tooltip">Enrolled Agent<span class="tooltiptext">An <strong>Enrolled Agent</strong> (or <strong>EA</strong>) is licensed by the federal government after passing a comprehensive IRS examination and background investigation. <strong>Enrolled Agents</strong> are permitted to represent taxpayers before the IRS in tax disputes.</span></span></li>
+								<li>Managing Partner</li>
+								<li>Tax Preparation</li>
+							</ul>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="mailto:joe@angelov.com">Contact Joe <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height white">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Heather Brewer
+						</div>
+						<div class="container-item-body">
+							<ul class="style-checks">
+								<li>Tax Preparation</li>
+								<li>Bookkeeping</li>
+							</ul>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="mailto:heather@angelov.com">Contact Heather <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height white">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Jennifer Smith-Crary
+						</div>
+						<div class="container-item-body">
+							<ul class="style-checks">
+								<li>Tax Preparation</li>
+								<li>Bookkeeping</li>
+							</ul>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="mailto:jennifer@angelov.com">Contact Jennifer <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height white">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Diana Burridge
+						</div>
+						<div class="container-item-body">
+							<ul class="style-checks">
+								<li>Payroll</li>
+								<li>Bookkeeping</li>
+							</ul>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="mailto:diana@angelov.com">Contact Diana <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height white">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Elena Bennet
+						</div>
+						<div class="container-item-body">
+							<ul class="style-checks">
+								<li>General Practice</li>
+							</ul>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="mailto:elena@angelov.com">Contact Elena <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height white">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Christie Cokely
+						</div>
+						<div class="container-item-body">
+							<ul class="style-checks">
+								<li>General Practice</li>
+							</ul>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="mailto:christie@angelov.com">Contact Christie <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height white">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Erin Jenner
+						</div>
+						<div class="container-item-body">
+							<ul class="style-checks">
+								<li>Office Manager</li>
+							</ul>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="mailto:erin@angelov.com">Contact Erin <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-3 container-item expand-height blue">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-question-circle fa-2x"></i> Other
+						</div>
+						<div class="container-item-body">
+							<h4>Don't know who to contact?</h4>
+							<p>Our office manager will make sure that you find the right person.</p>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="mailto:erin@angelov.com">Contact our <span class="avoidwrap">office manager <i class="fa fa-arrow-right" aria-hidden="true"></i></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div>
+				<div>
+					&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Angelo Ventresca Associates
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
