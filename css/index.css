@@ -1,10 +1,7 @@
 /*
- * Blue:	#254571
- *	Darker:	#1D3557
- *	Lighter:#3E74BD
- * Green:	#298A1F
- *	Darker:	#22711A
- * Gray:	#DDDDDD
+ * Blue:		#254571, rgb(37, 69, 113)
+ * Green:		#298A1F, rgb(41, 138, 31)
+ * Dark green:	#22711A, rgb(34, 113, 26)
  */
 
 body {
@@ -35,6 +32,11 @@ a.ninja {
 	text-decoration: none;
 	padding-bottom: 0;
 	border-bottom: 0;
+}
+a.link-container {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
 }
 a[href^="tel:"]:before {
 	font-family: FontAwesome;
@@ -86,18 +88,23 @@ ul li {
 	position: relative;
 }
 ul li:before {
-	content: "●";
+	font-family: FontAwesome;
+	content: "\f111";
+	font-size: 50%;
 	position: absolute;
-	left: -1em;
+	top: 1em;
+	left: -1.5em;
 }
 ul.style-checks li {
 	padding: 0.4em;
 }
 ul.style-checks li:before {
-	content: "✔";
+	font-family: FontAwesome;
+	content: "\f00c";
 	font-weight: bold;
 	font-size: 120%;
-	top: 0px;
+	left: -1.25em;
+	top: 0.25em;
 }
 table {
 	width: 100%;
@@ -149,6 +156,15 @@ h5 {
 	font-weight: normal;
 	margin: 1em 0;
 }
+iframe {
+	border: 0;
+	margin: 0;
+}
+::-moz-selection {
+	text-shadow: none;
+	background: #47BA3B;
+	color: white;
+}
 ::selection {
 	text-shadow: none;
 	background: #47BA3B;
@@ -159,6 +175,15 @@ h5 {
 }
 .clearfix {
 	clear: both;
+}
+.text-left {
+	text-align: left;
+}
+.text-center {
+	text-align: center;
+}
+.inline-block {
+	display: inline-block;
 }
 .menu-logo {
 	background: url("/img/logo-full-white.svg");
@@ -179,11 +204,13 @@ h5 {
 	cursor: default;
 	position: relative;
 	margin-right: 1em;
+	display: inline-block;
 }
 .tooltip:after {
 	font-family: FontAwesome;
 	content: " \f05a";
-	margin-right: -1em;
+	right: -1em;
+	position: absolute;
 }
 .tooltip .tooltiptext {
 	visibility: hidden;
@@ -373,6 +400,8 @@ h5 {
 	margin: 5px;
 	box-shadow: 0 3px 5px rgba(0,0,0,0.3);
 	border-radius: 3px;
+}
+.container-item.expand-height .container-item-container {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
@@ -411,6 +440,8 @@ h5 {
 	margin: 0;
 	padding: 1em;
 	position: relative;
+}
+.container-item.expand-height .container-item-body {
 	flex: 1;
 }
 .container-item .container-item-body *:first-child {
@@ -461,6 +492,8 @@ a.show-hide:after {
 	height: 100px;
 	max-width: 100%;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 }
 .payroll-table-container:after {
 	content: "";
@@ -471,6 +504,7 @@ a.show-hide:after {
 	bottom: 0;
 	z-index: 1;
 	background: linear-gradient(0deg, white, transparent);
+	pointer-events: none;
 }
 .payroll-table-container.shown {
 	height: auto;
@@ -593,6 +627,9 @@ iframe#map {
 	transform: translate(-50%, -50%);
 	color: rgba(0,0,0,0.1);
 }
+.address:after {
+	clear: both;
+}
 .address .sender {
 	display: block;
 	height: 6px;
@@ -602,6 +639,7 @@ iframe#map {
 	margin-top: 16px !important;
 	margin-bottom: 6px;
 	float: left;
+	clear: both;
 }
 .address .sender:before {
 	content: "";

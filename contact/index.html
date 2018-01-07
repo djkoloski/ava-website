@@ -8,14 +8,13 @@
 	<link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/css/index.css">
 	<title>Angelo Ventresca Associates</title>
-	<script type="text/javascript">
+	<script>
 		window.onload = function() {
 			var open = true;
 			var date = new Date();
 			
 			// Check season
 			switch (date.getMonth()) {
-				case 0:
 				case 1:
 				case 2:
 				case 3:
@@ -48,6 +47,7 @@
 				case 5:
 				case 6:
 				case 7:
+				case 8:
 					// Summer season
 					switch (date.getDay()) {
 						case 0:
@@ -65,10 +65,10 @@
 							break;
 					}
 					break;
-				case 8:
 				case 9:
 				case 10:
 				case 11:
+				case 0:
 					// Regular season
 					switch (date.getDay()) {
 						case 0:
@@ -87,6 +87,8 @@
 					}
 					break;
 			}
+			
+			open = true;
 			
 			var unknownElements = document.getElementsByClassName('condition-unknown');
 			var openElements = document.getElementsByClassName('condition-open');
@@ -220,20 +222,20 @@
 							<i class="fa fa-clock-o fa-2x" aria-hidden="true"></i> Hours
 						</div>
 						<h5 class="condition-container">
-							<div class="pure-u-1 condition-unknown">
+							<span class="pure-u-1 condition-unknown">
 								<i class="fa fa-circle-o-notch fa-spin fa-2x fa-fw"></i>
 								<span class="sr-only">Loading...</span>
-							</div>
-							<span class="condition-open">We're <span class="tooltip"><strong>probably open</strong><span class="tooltiptext">It's best to <strong>call before</strong> coming in for a visit. We might not be in due to a holiday or emergency.</span></span> right now. Come on in!</span>
-							<span class="condition-closed">We're <span class="tooltip"><strong>probably closed</strong><span class="tooltiptext">You never know when we'll be in the office. It never hurts to <strong>give us a call</strong> to be sure.</span></span> right now. Leave us a message!</span>
+							</span>
+							<span class="condition-open">We're open year-round, and we're <span class="tooltip"><strong>probably open</strong><span class="tooltiptext">It's best to <strong>call before</strong> coming in for a visit. We might not be in due to a holiday or emergency.</span></span> right now. Come on in!</span>
+							<span class="condition-closed">We're open year-round, but we're <span class="tooltip"><strong>probably closed</strong><span class="tooltiptext">You never know when we'll be in the office. It never hurts to <strong>give us a call</strong> to be sure.</span></span> right now. Leave us a message!</span>
 						</h5>
 						<div class="container-item-body hours-body">
 							<table>
 								<tr>
 									<th rowspan="2">Days</th>
-									<th colspan="2"><span class="tooltip">Regular Hours<span class="tooltiptext">We maintain regular hours <strong>between September and December</strong>, before tax season.</span></span></th>
-									<th colspan="2"><span class="tooltip">Tax Season Hours<span class="tooltiptext">We extend our hours <strong>between January and April</strong>, during tax season.</span></span></th>
-									<th colspan="2"><span class="tooltip">Summer Hours<span class="tooltiptext">We shorten our hours <strong>between May and August</strong>, during the summer.</span></span></th>
+									<th colspan="2"><span class="tooltip">Regular Hours<span class="tooltiptext">We maintain regular hours <strong>between October and January</strong>, before tax season.</span></span></th>
+									<th colspan="2"><span class="tooltip">Tax Season Hours<span class="tooltiptext">We extend our hours <strong>between February and April</strong>, during tax season.</span></span></th>
+									<th colspan="2"><span class="tooltip">Summer Hours<span class="tooltiptext">We shorten our hours <strong>between May and September</strong>, during the summer.</span></span></th>
 								</tr>
 								<tr>
 									<th>Open</th>
@@ -280,7 +282,7 @@
 							<i class="fa fa-map-marker fa-2x" aria-hidden="true"></i> Visit
 						</div>
 						<div class="container-item-body map-body">
-							<iframe id="map" src="https://maps.google.com/maps?q=Angelo Ventresca Associates LLC&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+							<iframe id="map" src="https://maps.google.com/maps?q=Angelo%20Ventresca%20Associates%20LLC&t=&z=17&ie=UTF8&iwloc=&output=embed"></iframe>
 						</div>
 					</div>
 				</div>
@@ -309,17 +311,18 @@
 				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height blue">
 					<div class="container-item-container">
 						<div class="container-item-header">
-							<i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Heather Brewer
+							<i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Erin Jenner
 						</div>
 						<div class="container-item-body">
 							<ul class="style-checks">
+								<li>Office Manager</li>
 								<li>Tax Preparation</li>
-								<li>Bookkeeping</li>
+								<li>Accounting Services Manager</li>
 								<li>Payroll</li>
 							</ul>
 						</div>
 						<div class="callout-right">
-							<a class="callout" href="mailto:heather@angelov.com">Contact Heather <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+							<a class="callout" href="mailto:erin@angelov.com">Contact Erin <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 						</div>
 					</div>
 				</div>
@@ -337,6 +340,23 @@
 						</div>
 						<div class="callout-right">
 							<a class="callout" href="mailto:jennifer@angelov.com">Contact Jennifer <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height blue">
+					<div class="container-item-container">
+						<div class="container-item-header">
+							<i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Heather Brewer
+						</div>
+						<div class="container-item-body">
+							<ul class="style-checks">
+								<li>Tax Preparation</li>
+								<li>Bookkeeping</li>
+								<li>Payroll</li>
+							</ul>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="mailto:heather@angelov.com">Contact Heather <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 						</div>
 					</div>
 				</div>
@@ -389,26 +409,15 @@
 						</div>
 					</div>
 				</div>
-				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height blue">
-					<div class="container-item-container">
-						<div class="container-item-header">
-							<i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Erin Jenner
-						</div>
-						<div class="container-item-body">
-							<ul class="style-checks">
-								<li>Office Manager</li>
-								<li>Tax Preparation</li>
-								<li>Bookkeeping</li>
-								<li>Payroll</li>
-							</ul>
-						</div>
-						<div class="callout-right">
-							<a class="callout" href="mailto:erin@angelov.com">Contact Erin <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-						</div>
-					</div>
-				</div>
 				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-3 container-item expand-height blue">
 					<div class="container-item-container borderless">
+						<div class="container-item-body">
+							<h4>Looking for accounting?</h4>
+							<p>Our accounting services manager is the right person to ask.</p>
+						</div>
+						<div class="callout-right">
+							<a class="callout" href="mailto:erin@angelov.com">Contact our accounting services <span class="avoidwrap"> manager <i class="fa fa-arrow-right" aria-hidden="true"></i></span></a>
+						</div>
 						<div class="container-item-body">
 							<h4>Don't know who to contact?</h4>
 							<p>Our secretary will make sure that you find the right person.</p>
@@ -423,7 +432,7 @@
 		<div class="footer">
 			<div>
 				<div>
-					&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Angelo Ventresca Associates
+					&copy; <script>document.write(new Date().getFullYear());</script> Angelo Ventresca Associates
 				</div>
 			</div>
 		</div>
