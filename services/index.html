@@ -15,7 +15,7 @@
 			var payrollShowHide = document.getElementById('show-hide-payroll');
 			var payrollContainer = document.getElementsByClassName('payroll-table-container')[0];
 			payrollShowHide.onclick = function(event) {
-				if (payrollContainer.className.includes("shown")) {
+				if (payrollContainer.className.indexOf("shown") >= 0) {
 					payrollShowHide.textContent = "show";
 					payrollContainer.className = payrollContainer.className.replace("shown", "");
 				} else {
@@ -286,6 +286,7 @@
 								<li>Federal 941 return</li>
 								<li>State unemployment comp return</li>
 								<li>State withholding tax return</li>
+								<li>Local withholding tax return</li>
 							</ul>
 							<h4>Each year, we:</h4>
 							<ul>
@@ -478,7 +479,7 @@
 					<p>We understand that accounting is a very personal part of a business. That's why we're proud to personalize your accounting service to your individual business needs. We offer all of our accounting services and more to make sure that you can focus on managing your business.</p>
 					<div class="callout-right">
 						<h4>Let's figure this out together</h4>
-						<a class="callout" href="/contact#associates">Ask us about accounting <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						<a class="callout" href="mailto:erin@angelov.com">Ask us about accounting <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 					</div>
 				</div>
 				<div class="pure-u-1">

@@ -36,7 +36,8 @@ a.ninja {
 a.link-container {
 	display: flex;
 	flex-direction: row;
-	flex: 1;
+	flex: 1 0 auto;
+	flex-shrink: 0;
 }
 a[href^="tel:"]:before {
 	font-family: FontAwesome;
@@ -304,10 +305,15 @@ iframe {
 	right: 0;
 	top: 0;
 	bottom: 0;
-	object-position: 50% 40%;
-	object-fit: cover;
 	filter: blur(7px);
 	transform: scale(1.1);
+	background-image: url('/img/office-splash.jpg');
+	background-size: cover;
+	background-position: 50% 40%;
+}
+.splash .splash-image svg {
+	width: 100%;
+	height: 100%;
 }
 .splash .content-block {
 	height: 100%;
@@ -402,7 +408,8 @@ iframe {
 	border-radius: 3px;
 }
 .container-item.expand-height .container-item-container {
-	flex: 1;
+	flex: 1 0 auto;
+	flex-shrink: 0;
 	display: flex;
 	flex-direction: column;
 }
@@ -442,14 +449,16 @@ iframe {
 	position: relative;
 }
 .container-item.expand-height .container-item-body {
-	flex: 1;
+	flex: 1 0 auto;
+	flex-shrink: 0;
 }
 .container-item .container-item-body *:first-child {
 	margin-top: 0;
 }
 .container-item .container-item-image {
 	width: 100%;
-	flex: 1;
+	flex: 1 0 auto;
+	flex-shrink: 0;
 	background-size: cover;
 	background-repeat: no-repeat;
 	border-radius: 3px;
@@ -464,7 +473,8 @@ iframe {
 	text-align: center;
 }
 .container-item.header-only .container-item-header {
-	flex: 1;
+	flex: 1 0 auto;
+	flex-shrink: 0;
 	border-radius: 5px;
 }
 .container-item.header-only .container-item-header i {
@@ -517,7 +527,8 @@ a.show-hide:after {
 }
 .payroll-table-padding {
 	padding: 1em;
-	flex: 1;
+	flex: 1 0 auto;
+	flex-shrink: 0;
 }
 .payroll-table td {
 	text-align: right;
@@ -600,7 +611,8 @@ a.show-hide:after {
 }
 .container-item-body.map-body {
 	min-height: 200px;
-	flex: 1;
+	flex: 1 0 auto;
+	flex-shrink: 0;
 }
 iframe#map {
 	width: 100%;
@@ -690,7 +702,10 @@ iframe#map {
 	text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
 	line-height: 1.5em;
 }
-
+.opt-email {
+	opacity: 0.8;
+	padding: 0.5em;
+}
 @media (min-width: 1023px)
 {
 	.container-item.other .container-item-container {
