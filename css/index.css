@@ -847,3 +847,24 @@ iframe#map {
 		font-size: 80%;
 	}
 }
+
+.alert {
+	background: #ffa;
+	color: #400;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	margin-top: 2rem;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+}
+.alert-toggle-label {
+	float: right;
+	cursor: pointer;
+}
+
+#alert-toggle:checked ~ .alert {
+	display: none;
+}
+
+.hidden {
+	display: none;
+}
