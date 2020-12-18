@@ -10,105 +10,6 @@
 	<link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/css/index.css">
 	<title>Contact - Angelo Ventresca Associates</title>
-	<script>
-		window.onload = function() {
-			var open = true;
-			var date = new Date();
-			
-			// Check season
-			switch (date.getMonth()) {
-				case 1:
-				case 2:
-				case 3:
-					// Tax season
-					switch (date.getDay()) {
-						case 0:
-							open = false;
-							break;
-						case 1:
-						case 2:
-						case 3:
-						case 4:
-							if (date.getHours() < 8 || date.getHours() > 19) {
-								open = false;
-							}
-							break;
-						case 5:
-							if (date.getHours() < 8 || date.getHours() > 17) {
-								open = false;
-							}
-							break;
-						case 6:
-							if (date.getHours() < 8 || date.getHours() > 15) {
-								open = false;
-							}
-							break;
-					}
-					break;
-				case 4:
-				case 5:
-				case 6:
-				case 7:
-				case 8:
-					// Summer season
-					switch (date.getDay()) {
-						case 0:
-						case 6:
-							open = false;
-							break;
-						case 1:
-						case 2:
-						case 3:
-						case 4:
-							if (date.getHours() < 8 || date.getHours() > 16 || (date.getHours() == 16 && date.getMinutes() > 30)) {
-								open = false;
-							}
-							break;
-						case 5:
-							if (date.getHours() < 8 || date.getHours() > 12) {
-								open = false;
-							}
-							break;
-					}
-					break;
-				case 9:
-				case 10:
-				case 11:
-				case 0:
-					// Regular season
-					switch (date.getDay()) {
-						case 0:
-						case 6:
-							open = false;
-							break;
-						case 1:
-						case 2:
-						case 3:
-						case 4:
-						case 5:
-							if (date.getHours() < 8 || date.getHours() > 16 || (date.getHours() == 16 && date.getMinutes() > 30)) {
-								open = false;
-							}
-							break;
-					}
-					break;
-			}
-			
-			var unknownElements = document.getElementsByClassName('condition-unknown');
-			var openElements = document.getElementsByClassName('condition-open');
-			var closedElements = document.getElementsByClassName('condition-closed');
-			
-			for (var i = 0; i < unknownElements.length; ++i) {
-				unknownElements[i].className += ' hidden';
-			}
-			for (var i = 0; i < openElements.length; ++i) {
-				openElements[i].className += ' ' + (open ? 'shown' : 'hidden');
-			}
-			for (var i = 0; i < closedElements.length; ++i) {
-				closedElements[i].className += ' ' + (!open ? 'shown' : 'hidden');;
-			}
-	};
-	</script>
 </head>
 <body>
 	<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
@@ -160,7 +61,7 @@
 							<p>Our secretary will make sure that you find the right person.</p>
 						</div>
 						<div class="callout-right">
-							<a class="callout" href="mailto:david@angelov.com">Contact our <span class="avoidwrap">secretary<i class="fa fa-arrow-right" aria-hidden="true"></i></span></a>
+							<a class="callout" href="mailto:erin@angelov.com">Contact our <span class="avoidwrap">secretary<i class="fa fa-arrow-right" aria-hidden="true"></i></span></a>
 						</div>
 					</div>
 				</div>
@@ -402,24 +303,6 @@
 						</div>
 					</div>
 				</div>
-				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height blue">
-					<div class="container-item-container">
-						<div class="container-item-header">
-							<i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> David Jenner
-						</div>
-						<div class="container-item-body">
-							<ul class="style-checks">
-								<li>Bookkeeping</li>
-								<li>Payroll</li>
-								<li>Secretary</li>
-							</ul>
-						</div>
-						<div class="callout-right">
-							<div class="opt-email">email <strong>david@angelov.com</strong></div>
-							<a class="callout" href="mailto:david@angelov.com">Contact David <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-						</div>
-					</div>
-				</div>
 				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-3 container-item expand-height blue">
 					<div class="container-item-container borderless">
 						<div class="container-item-body">
@@ -430,13 +313,17 @@
 							<div class="opt-email">email <strong>erin@angelov.com</strong></div>
 							<a class="callout" href="mailto:erin@angelov.com">Contact our accounting services <span class="avoidwrap"> manager <i class="fa fa-arrow-right" aria-hidden="true"></i></span></a>
 						</div>
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 container-item expand-height blue">
+					<div class="container-item-container borderless">
 						<div class="container-item-body">
 							<h4>Don't know who to contact?</h4>
 							<p>Our secretary will make sure that you find the right person.</p>
 						</div>
 						<div class="callout-right">
-							<div class="opt-email">email <strong>david@angelov.com</strong></div>
-							<a class="callout" href="mailto:david@angelov.com">Contact our <span class="avoidwrap">secretary <i class="fa fa-arrow-right" aria-hidden="true"></i></span></a>
+							<div class="opt-email">email <strong>erin@angelov.com</strong></div>
+							<a class="callout" href="mailto:erin@angelov.com">Contact our <span class="avoidwrap">secretary <i class="fa fa-arrow-right" aria-hidden="true"></i></span></a>
 						</div>
 					</div>
 				</div>
@@ -450,5 +337,102 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		var open = true;
+		var date = new Date();
+		
+		// Check season
+		switch (date.getMonth()) {
+			case 1:
+			case 2:
+			case 3:
+				// Tax season
+				switch (date.getDay()) {
+					case 0:
+						open = false;
+						break;
+					case 1:
+					case 2:
+					case 3:
+					case 4:
+						if (date.getHours() < 8 || date.getHours() > 19) {
+							open = false;
+						}
+						break;
+					case 5:
+						if (date.getHours() < 8 || date.getHours() > 17) {
+							open = false;
+						}
+						break;
+					case 6:
+						if (date.getHours() < 8 || date.getHours() > 15) {
+							open = false;
+						}
+						break;
+				}
+				break;
+			case 4:
+			case 5:
+			case 6:
+			case 7:
+			case 8:
+				// Summer season
+				switch (date.getDay()) {
+					case 0:
+					case 6:
+						open = false;
+						break;
+					case 1:
+					case 2:
+					case 3:
+					case 4:
+						if (date.getHours() < 8 || date.getHours() > 16 || (date.getHours() == 16 && date.getMinutes() > 30)) {
+							open = false;
+						}
+						break;
+					case 5:
+						if (date.getHours() < 8 || date.getHours() > 12) {
+							open = false;
+						}
+						break;
+				}
+				break;
+			case 9:
+			case 10:
+			case 11:
+			case 0:
+				// Regular season
+				switch (date.getDay()) {
+					case 0:
+					case 6:
+						open = false;
+						break;
+					case 1:
+					case 2:
+					case 3:
+					case 4:
+					case 5:
+						if (date.getHours() < 8 || date.getHours() > 16 || (date.getHours() == 16 && date.getMinutes() > 30)) {
+							open = false;
+						}
+						break;
+				}
+				break;
+		}
+		
+		var unknownElements = document.getElementsByClassName('condition-unknown');
+		var openElements = document.getElementsByClassName('condition-open');
+		var closedElements = document.getElementsByClassName('condition-closed');
+		
+		for (var i = 0; i < unknownElements.length; ++i) {
+			unknownElements[i].className += ' hidden';
+		}
+		for (var i = 0; i < openElements.length; ++i) {
+			openElements[i].className += ' ' + (open ? 'shown' : 'hidden');
+		}
+		for (var i = 0; i < closedElements.length; ++i) {
+			closedElements[i].className += ' ' + (!open ? 'shown' : 'hidden');;
+		}
+	</script>
 </body>
 </html>
