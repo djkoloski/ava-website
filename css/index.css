@@ -702,6 +702,20 @@ iframe#map {
 	text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
 	line-height: 1.5em;
 }
+.bio .container-item-header {
+	display: flex;
+	align-items: center;
+}
+.bio .name {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 1;
+	text-transform: none;
+	font-size: 150%;
+}
+.bio .subtitle {
+	font-weight: bold;
+}
 .opt-email {
 	opacity: 0.8;
 	padding: 0.5em;
