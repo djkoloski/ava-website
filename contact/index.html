@@ -148,14 +148,7 @@
 									<th>Close</th>
 								</tr>
 								<tr>
-									<td>Monday - Thursday</td>
-									<td>8:00 AM</td>
-									<td>8:00 PM</td>
-									<td>8:00 AM</td>
-									<td>4:30 PM</td>
-								</tr>
-								<tr>
-									<td>Friday</td>
+									<td>Monday - Friday</td>
 									<td>8:00 AM</td>
 									<td>6:00 PM</td>
 									<td>8:00 AM</td>
@@ -164,7 +157,14 @@
 								<tr>
 									<td>Saturday</td>
 									<td>8:00 AM</td>
-									<td>4:00 PM</td>
+									<td>12:00 PM</td>
+									<td>Closed</td>
+									<td>Closed</td>
+								</tr>
+								<tr>
+									<td>Sunday</td>
+									<td>Closed</td>
+									<td>Closed</td>
 									<td>Closed</td>
 									<td>Closed</td>
 								</tr>
@@ -326,17 +326,13 @@
 					case 2:
 					case 3:
 					case 4:
-						if (date.getHours() < 8 || date.getHours() > 19) {
-							open = false;
-						}
-						break;
 					case 5:
-						if (date.getHours() < 8 || date.getHours() > 17) {
+						if (date.getHours() < 8 || date.getHours() >= 18) {
 							open = false;
 						}
 						break;
 					case 6:
-						if (date.getHours() < 8 || date.getHours() > 15) {
+						if (date.getHours() < 8 || date.getHours() >= 12) {
 							open = false;
 						}
 						break;
@@ -361,12 +357,8 @@
 					case 2:
 					case 3:
 					case 4:
-						if (date.getHours() < 8 || date.getHours() > 16 || (date.getHours() == 16 && date.getMinutes() > 30)) {
-							open = false;
-						}
-						break;
 					case 5:
-						if (date.getHours() < 8 || date.getHours() > 12) {
+						if (date.getHours() < 8 || date.getHours() >= 12) {
 							open = false;
 						}
 						break;
